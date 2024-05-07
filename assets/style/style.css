@@ -6,14 +6,14 @@
     /* cores secundarias */
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
-    --Very-dark-violet: hsl(278, 68%, 11%);
+    --Very-dark-violet: #21092f;
 }
 
 /* estilos gerais */
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 500;
@@ -88,10 +88,59 @@ p {
 }
 
 /* estilos secao formulario */
-.content-card .content-form {
-    width: auto;
+.content-form {
+    flex-grow: 1;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.content-form .form-box {
+    height: 490px;
+    width: 440px;
+    text-transform: uppercase;
+}
+
+.content-form .form-box form fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+.content-form .form-box form fieldset .name-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-form .form-box form fieldset .name-number label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--Very-dark-violet);
+}
+
+.content-form .form-box form fieldset .name-number input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: var(--Very-dark-violet);
+    border: 1px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+    outline: none;
+}
+
+.content-form .form-box form fieldset .name-number input::placeholder {
+    color: var(--Dark-grayish-violet);
+}
+
+.content-form .form-box form fieldset .name-number input:focus {
+    border-image: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+}
+
+/* border-left-color: hsl(249, 99%, 64%);
+border-right-color: hsl(278, 94%, 30%); */
 /* Mobile: 375px
 Desktop: 1440px */
