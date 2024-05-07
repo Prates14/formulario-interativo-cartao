@@ -1,0 +1,97 @@
+:root {
+    /* cores primarias */
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /* active input border */
+    --red: hsl(0, 100%, 66%); /* input errors */
+
+    /* cores secundarias */
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* estilos cartoes */
+.content-card {
+    background: url(./../images/bg-main-desktop.png) no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 100%;
+}
+
+/* cartao-1 | cartao-2 */
+.content-card .card {
+    background-size: cover;
+    width: 447px;
+    height: 245px;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    color: white;
+}
+
+/* estilos cartao-1 */
+.content-card .card-front {
+    background: url(./../images/bg-card-front.png) no-repeat;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 20%;
+    left: 45%;
+}
+
+.content-card .card-front .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.content-card .card-front .card-info .info-number p {
+    font-size: 33px;
+}
+
+.content-card .card-front .card-info .info-name-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* estilos cartao-2 */
+.content-card .card-back {
+    background: url(./../images/bg-card-back.png) no-repeat;
+    align-items: center;
+    justify-content: flex-end;
+    top: 25%;
+    left: 60%;
+}
+
+.content-card .card-back .number-cvc {
+    margin-right: 35px;
+}
+
+/* estilos secao formulario */
+.content-card .content-form {
+    width: auto;
+    height: 100%;
+}
+
+/* Mobile: 375px
+Desktop: 1440px */
