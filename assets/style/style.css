@@ -43,12 +43,13 @@ p {
 
 /* cartao-1 | cartao-2 */
 .content-card .card {
-    background-size: cover;
     width: 447px;
     height: 245px;
     display: flex;
     position: relative;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px black;
     color: white;
 }
 
