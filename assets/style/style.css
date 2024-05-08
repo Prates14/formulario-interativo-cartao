@@ -23,6 +23,11 @@ p {
     font-size: 18px;
 }
 
+.flex-wh-hundred {
+    display: flex;
+    width: 100%;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -68,10 +73,8 @@ p {
 }
 
 .content-card .card-front .card-info .info-name-data {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 /* estilos cartao-2 */
@@ -103,9 +106,7 @@ p {
 }
 
 .content-form .form-box form fieldset {
-    display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 40px;
 }
 
@@ -143,16 +144,12 @@ p {
 
 /* inputs de data exp. e codigo cvc */
 .content-form .form-box form fieldset .name-number .labels-text {
-    display: flex;
     justify-content: flex-start;
-    width: 100%;
     gap: 100px;
 }
 
 .content-form .form-box form fieldset .name-number .inputs-text {
-    display: flex;
     gap: 10px;
-    width: 100%;
 }
 
 .content-form .form-box form fieldset .name-number .inputs-text input {
