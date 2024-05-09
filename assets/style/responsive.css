@@ -1,2 +1,62 @@
+@media (max-width: 1570px) {
+    .content-form .form-box {
+        margin-left: 130px;
+    }
+
+    .content-card .card-front {
+        left: 25%;
+    }
+
+    .content-card .card-back {
+        left: 45%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .content-card .card-front {
+        left: 15%;
+    }
+
+    .content-card .card-back {
+        left: 35%;
+    }
+
+    .content-card .card {
+        width: 397px;
+        height: 215px;
+    }
+
+    .content-card .card-front .card-info .info-number p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-card .card {
+        width: 357px;
+        height: 185px;
+    }
+
+    .content-card .card-front .card-logo img {
+        width: 64px;
+        height: 35px;
+    }
+
+    .content-card .card-front .card-info .info-number p {
+        font-size: 26px;
+    }
+
+    .content-card .card-front .card-info .info-name-data p {
+        font-size: 14px;
+    }
+
+    .content-form .form-box {
+        width: 380px;
+    }
+}
+
+@media (max-width: 992px) {}
+
 /* Mobile: 375px
+768px até 992px é tablet. acima disso é computador. abaixo disso é celular
 Desktop: 1440px */
