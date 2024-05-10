@@ -34,7 +34,7 @@
             </div>
   
             <div class="info-name-data flex-wh-hundred">
-              <p>Jane Appleseed</p>
+              <p value="cardholder">Jane Appleseed</p>
               <p>00/00</p>
             </div>
           </div>
@@ -53,7 +53,7 @@
             <fieldset class="flex-wh-hundred">
               <div class="name-number">
                 <label for="cardholder">Cardholder Name</label>
-                <input type="text" name="cardholder" id="cardholher" placeholder="e.g. Jane Appleseed" />
+                <input type="text" name="cardholder" id="cardholher" placeholder="e.g. Jane Appleseed" minlength="3" maxlength="30" pattern="^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)?$" />
               </div>
   
               <div class="name-number">
@@ -88,12 +88,7 @@
 
   <!-- Thank you!
   We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  Continue -->
 </body>
 
 </html>
