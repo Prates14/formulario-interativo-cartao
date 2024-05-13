@@ -160,11 +160,11 @@ p {
     gap: 10px;
 }
 
-.content-form .form-box form fieldset .name-number .inputs-text input {
+.content-form .form-box form fieldset .name-number .inputs-text div {
     max-width: 20%;
 }
 
-.content-form .form-box form fieldset .name-number .inputs-text input:last-child {
+.content-form .form-box form fieldset .name-number .inputs-text div:nth-child(3) {
     max-width: max-content;
     margin-left: 35px;
 }
@@ -180,7 +180,10 @@ p {
 }
 
 .error-text {
-    font-size: 12px;
+    font-size: 9px;
     color: var(--red);
-    padding-bottom: 12px;
+    padding-top: 2px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 105%;
 }
