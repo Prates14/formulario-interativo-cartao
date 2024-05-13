@@ -1,17 +1,17 @@
 class formulario {
     constructor() {
-        this.form = document.querySelector('#form');
+        this.form = document.querySelector('.formulario');
         this.evento();
     }
 
     evento() {
         this.form.addEventListener('submit', e => {
-            handleSubmit(e);
+            this.handleSubmit(e);
         });
     }
 
     //Condição para envio do formulário
-    handleSubmit(e) {   
+    handleSubmit(e) {
         e.preventDefault();
         const camposValidos = this.camposValidos();
         if (camposValidos === true) {
@@ -24,7 +24,7 @@ class formulario {
     camposValidos() {
         let valid = true;
 
-        for(const errorText of this.form.querySelectorAll('.errorText')) {
+        for(const errorText of this.form.querySelectorAll('.error-text')) {
             errorText.remove();
         }
 

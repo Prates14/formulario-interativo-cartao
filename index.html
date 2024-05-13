@@ -49,16 +49,16 @@
       <!-- secao formulario -->
       <section class="content-form">
         <div class="form-box">
-          <form action="#" method="post" id="formulario">
+          <form action="/" method="post" class="formulario">
             <fieldset class="flex-wh-hundred">
               <div class="name-number">
                 <label for="cardholder">Cardholder Name</label>
-                <input type="text" name="cardholder" class="validar" id="cardholher" placeholder="e.g. Jane Appleseed" minlength="3" maxlength="30" pattern="^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)?$" />
+                <input type="text" class="validar" id="cardholher" placeholder="e.g. Jane Appleseed" minlength="3" maxlength="30" pattern="^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)?$" />
               </div>
   
               <div class="name-number">
                 <label for="num">Card Number</label>
-                <input type="text" name="num" class="validar" id="num" placeholder="e.g. 1234 5678 9123 0000" />
+                <input type="text" class="validar" id="num" placeholder="e.g. 1234 5678 9123 0000" />
               </div>
   
               <div class="name-number date-cvc">
@@ -68,9 +68,9 @@
                 </div>
                 
                 <div class="inputs-text flex-wh-hundred">
-                  <input type="number" min="1" max="12" name="date" class="validar" id="date-mounth" placeholder="MM" />
-                  <input type="number" min="1" max="99" name="date" class="validar" id="date-year" placeholder="YY" />
-                  <input type="number" min="100" name="cvc" class="validar" id="cvc" placeholder="e.g. 123" />
+                  <input type="number" min="1" max="12" class="validar" id="date-mounth" placeholder="MM" />
+                  <input type="number" min="1" max="99" class="validar" id="date-year" placeholder="YY" />
+                  <input type="number" min="100" class="validar" id="cvc" placeholder="e.g. 123" />
                 </div>
               </div>
   
@@ -89,6 +89,6 @@
   <!-- Thank you!
   We've added your card details
   Continue -->
+  <script src="assets/js/formulario.js"></script>
 </body>
-<script src="assets/js/formulario.js"></script>
 </html>
