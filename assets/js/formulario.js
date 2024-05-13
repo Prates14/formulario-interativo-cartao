@@ -15,7 +15,6 @@ class formulario {
         e.preventDefault();
         const camposValidos = this.camposValidos();
         if (camposValidos === true) {
-            alert('Formulário enviado!');
             this.form.submit();
         }
     }
@@ -31,7 +30,7 @@ class formulario {
         //Validação geral dos campos
         for (const campo of document.querySelectorAll('.validar')) {
             campo.style.borderColor = 'hsl(270, 3%, 87%)';
-            
+
             if (!campo.value) {
                 campo.style.borderColor = 'hsl(0, 100%, 66%)';
                 this.criaError(campo, "Can't be blank.");
