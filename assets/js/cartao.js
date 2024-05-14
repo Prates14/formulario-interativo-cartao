@@ -1,13 +1,15 @@
 function updateCard() {
     let nome = document.querySelector('#cardholder').value || 'Jade Appleseed';
-    let numero = document.querySelector('#num').value || '0000 0000 0000 0000';
+    let numero = document.querySelector('#num').value;
     let mes = document.querySelector('#dateMounth').value || '00';
     let ano = document.querySelector('#dateYear').value || '00';
+    let cvc = document.querySelector('#cvc').value || '000';
     let data = `${mes}/${ano}`;
 
-    document.querySelector('#val-num').textContent = numeroFormatado(numero);
+    document.querySelector('#val-num').textContent = numeroFormatado(numero) || '0000 0000 0000 0000';
     document.querySelector('#val-nome').textContent = nome;
     document.querySelector('#val-data').textContent = data;
+    document.querySelector('#val-cvc').textContent = cvc;
     document.querySelector('#num').value = numeroFormatado(numero);
 }
 
