@@ -37,7 +37,7 @@ class formulario {
                 valid = false;
             }
             //Validação do nome do cartao
-            if (campo.id === 'cardholher') {
+            if (campo.id === 'cardholder') {
                 if (!this.validarNome(campo)) valid = false;
             }
             //Validação do numero do cartao
@@ -61,7 +61,7 @@ class formulario {
         let valid = true;
         const nome = campo.value;
 
-        if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)?$/g)) {
+        if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)+$/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Name cannot contain numbers and/or symbols");
             valid = false;
@@ -76,7 +76,8 @@ class formulario {
 
     validarNumero(campo) {
         let valid = true;
-        const numero = campo.value;
+        let numero = campo.value;
+        numero = numero.replace(/\s/g, '');
 
         if(numero.match(/\D/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
