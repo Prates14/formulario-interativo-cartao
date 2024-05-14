@@ -1,3 +1,5 @@
+//Criação e uso de um novo conjunto de elementos HTML (remoção do formulário e mensagem de resposta no envio do mesmo)
+//OBS: A estilisação se encontra no final do arquivo 'style.css'.
 function formularioEnviado() {
     const newHtml = `
         <div class="completed-box">

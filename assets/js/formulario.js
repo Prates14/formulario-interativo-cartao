@@ -15,6 +15,7 @@ class formulario {
         e.preventDefault();
         const camposValidos = this.camposValidos();
         if (camposValidos === true) {
+            //função referente ao arquivo 'enviado.js'
             formularioEnviado();
         }
     }
@@ -22,7 +23,7 @@ class formulario {
     //Validação de todos os campos do formulário
     camposValidos() {
         let valid = true;
-
+        //removendo mensagens de erro
         for (const errorText of this.form.querySelectorAll('.error-text')) {
             errorText.remove();
         }
@@ -31,6 +32,7 @@ class formulario {
         for (const campo of document.querySelectorAll('.validar')) {
             campo.style.borderColor = 'hsl(270, 3%, 87%)';
 
+            //validação de campos em geral
             if (!campo.value) {
                 campo.style.borderColor = 'hsl(0, 100%, 66%)';
                 this.criaError(campo, "Can't be blank.");
@@ -60,7 +62,7 @@ class formulario {
     validarNome(campo) {
         let valid = true;
         const nome = campo.value;
-
+        //conjunto e quantidade de caracteres
         if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)*$/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Name cannot contain numbers and/or symbols");
@@ -78,7 +80,7 @@ class formulario {
         let valid = true;
         let numero = campo.value;
         numero = numero.replace(/\s/g, '');
-
+        //conjunto e quantidade de caracteres
         if(numero.match(/\D/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Wrong format, numbers only");
@@ -95,7 +97,7 @@ class formulario {
     validarData(campo) {
         let valid = true;
         const ano = document.querySelector('#dateYear');
-
+        //validando existencia do ano no input
         if(!ano.value && campo.value) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "year can't be blank");
@@ -107,7 +109,7 @@ class formulario {
     validarCvc(campo) {
         let valid = true;
         const cvc = campo.value;
-
+        //conjunto e quantidade de caracteres
         if(cvc.match(/\D/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Wrong format, number only");

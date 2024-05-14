@@ -1,3 +1,4 @@
+//Interação com a página. Atualizando dinamicamente as informações no cartão
 function updateCard() {
     let nome = document.querySelector('#cardholder').value || 'Jade Appleseed';
     let numero = document.querySelector('#num').value;
@@ -13,6 +14,7 @@ function updateCard() {
     document.querySelector('#num').value = numeroFormatado(numero);
 }
 
+//Formatação do número do cartão
 function numeroFormatado(val) {
     val = val.replace(/\s/g, '');
 
