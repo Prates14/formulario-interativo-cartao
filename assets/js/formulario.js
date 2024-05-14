@@ -15,7 +15,7 @@ class formulario {
         e.preventDefault();
         const camposValidos = this.camposValidos();
         if (camposValidos === true) {
-            this.form.submit();
+            formularioEnviado();
         }
     }
 
@@ -61,7 +61,7 @@ class formulario {
         let valid = true;
         const nome = campo.value;
 
-        if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)+$/g)) {
+        if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)*$/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Name cannot contain numbers and/or symbols");
             valid = false;
