@@ -51,8 +51,8 @@ class formulario {
                 if (!this.validarCvc(campo)) valid = false;
             }
             //Validação da data
-            if(campo.id === 'dateMounth' || campo.id === 'dateYear') {
-                if(!this.validarData(campo)) valid = false;
+            if (campo.id === 'dateMounth' || campo.id === 'dateYear') {
+                if (!this.validarData(campo)) valid = false;
             }
         }
 
@@ -63,12 +63,12 @@ class formulario {
         let valid = true;
         const nome = campo.value;
         //conjunto e quantidade de caracteres
-        if(!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)*$/g)) {
+        if (!nome.match(/^[a-zA-ZÀ-ÿ]+(?:\s[a-zA-ZÀ-ÿ]+)*$/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Name cannot contain numbers and/or symbols");
             valid = false;
         }
-        if(nome.length < 3 || nome.length > 30) {
+        if (nome.length < 3 || nome.length > 30) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Name must be between 3 and 30 characters long");
             valid = false;
@@ -81,12 +81,12 @@ class formulario {
         let numero = campo.value;
         numero = numero.replace(/\s/g, '');
         //conjunto e quantidade de caracteres
-        if(numero.match(/\D/g)) {
+        if (numero.match(/\D/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Wrong format, numbers only");
             valid = false;
         }
-        if(numero.length !== 16) {
+        if (numero.length !== 16) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Number must be 16 characters long");
             valid = false;
@@ -98,7 +98,7 @@ class formulario {
         let valid = true;
         const ano = document.querySelector('#dateYear');
         //validando existencia do ano no input
-        if(!ano.value && campo.value) {
+        if (!ano.value && campo.value) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "year can't be blank");
             valid = false;
@@ -110,12 +110,12 @@ class formulario {
         let valid = true;
         const cvc = campo.value;
         //conjunto e quantidade de caracteres
-        if(cvc.match(/\D/g)) {
+        if (cvc.match(/\D/g)) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Wrong format, number only");
             valid = false;
         }
-        if(cvc.length !== 3) {
+        if (cvc.length !== 3) {
             campo.style.borderColor = 'hsl(0, 100%, 66%)';
             this.criaError(campo, "Number must be 3 characters long");
             valid = false;
